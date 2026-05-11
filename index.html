@@ -31,11 +31,7 @@
         <div class="hero-abstract">
           <div class="abstract-label">Abstract</div>
           <p>
-            The detection and grounding of manipulated content in multimodal news is challenging when visual edits
-            and textual narratives remain semantically consistent. We introduce <strong>SAMM</strong>, a large-scale
-            Semantic-Aligned Multimodal Manipulation dataset, and <strong>RamDG++</strong>, a retrieval-augmented
-            framework that uses the CAP celebrity knowledge base to detect fake news, identify manipulation types,
-            and ground manipulated image regions and text spans.
+            The detection and grounding of manipulated content in multimodal data is a pivotal challenge in media forensics. While existing benchmarks have advanced the field, they often rely on misalignment artifacts that fail to capture real-world forgery patterns. Practical attacks typically maintain semantic consistency across modalities, whereas current datasets introduce artificial cross-modal disruptions that act as easily detectable shortcuts. To bridge this gap, we introduce the study of Semantically-Coordinated Multimodal Manipulation, where visual edits are systematically paired with contextually consistent textual narratives. We first present the Semantic-Aligned Multimodal Manipulation (SAMM) dataset, synthesized via a two-stage pipeline: (1) applying state-of-the-art image editing techniques, and (2) generating plausible textual descriptions that reinforce the visual deception. To tackle this more sophisticated forgery, we propose RamDG++, a Retrieval-Augmented Manipulation Detection and Grounding framework built upon a Multimodal Large Language Model (MLLM) backbone. RamDG++ leverages retrieved identity-specific background information through two key mechanisms: in the training stage, we introduce Celebrity-News Cross-Source Contrastive Learning (CNCL), which utilizes retrieved multimodal celebrity data as a bridge to align and remedy the semantic gap; in the inference stage, we propose Test-time Adaptive Gating to dynamically filter background noise, further sharpening detection and grounding precision. Extensive experiments demonstrate that RamDG++ significantly outperforms existing methods, achieving a 2.06\% improvement in detection accuracy on the SAMM dataset over state-of-the-art approaches.
           </p>
         </div>
 
