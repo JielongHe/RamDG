@@ -8,53 +8,33 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* Enlarged Qualitative Results section */
+    /* Qualitative Results: same visual width as Method */
     .qualitative-section {
-      width: 100%;
-      max-width: none;
-      padding-left: 18px;
-      padding-right: 18px;
-    }
-
-    .qualitative-container {
-      width: min(1680px, 98vw);
-      margin: 0 auto;
       text-align: center;
     }
 
     .qualitative-figure {
       width: 100%;
-      max-width: none !important;
-      margin: 32px auto 0;
-      padding: 18px;
-      box-sizing: border-box;
+      max-width: 1180px;
+      margin: 28px auto 0;
     }
 
     .qualitative-figure img {
       width: 100%;
-      max-width: none !important;
+      max-width: none;
       display: block;
     }
 
     .qualitative-figure figcaption {
-      max-width: 1180px;
-      margin: 20px auto 0;
-      font-size: 1.05rem;
-      line-height: 1.7;
+      max-width: 920px;
+      margin: 18px auto 0;
+      font-size: 0.98rem;
+      line-height: 1.65;
     }
 
     @media (max-width: 768px) {
-      .qualitative-section {
-        padding-left: 12px;
-        padding-right: 12px;
-      }
-
-      .qualitative-container {
-        width: 100%;
-      }
-
       .qualitative-figure {
-        padding: 10px;
+        max-width: 100%;
       }
 
       .qualitative-figure figcaption {
@@ -75,7 +55,9 @@
           Yaxiong Wang, Jinjie Shen, Jielong He, Shengeng Tang, Lechao Chen, Pu Nan, and Zhun Zhong
         </p>
 
-        <p class="affiliation">A realistic benchmark and retrieval-augmented baseline for multimodal forgery detection.</p>
+        <p class="affiliation">
+          A realistic benchmark and retrieval-augmented baseline for multimodal forgery detection.
+        </p>
 
         <div class="link-row">
           <a href="https://github.com/shen8424/SAMM-RamDG-CAP" target="_blank" rel="noopener">Code</a>
@@ -88,20 +70,21 @@
         <div class="hero-abstract">
           <div class="abstract-label">Abstract</div>
           <p>
-            The detection and grounding of manipulated content in multimodal data is a pivotal challenge in media forensics.
-            While existing benchmarks have advanced the field, they often rely on misalignment artifacts that fail to capture
-            real-world forgery patterns. Practical attacks typically maintain semantic consistency across modalities, whereas
-            current datasets introduce artificial cross-modal disruptions that act as easily detectable shortcuts. To bridge
-            this gap, we introduce the study of Semantically-Coordinated Multimodal Manipulation, where visual edits are
-            systematically paired with contextually consistent textual narratives. We first present the Semantic-Aligned
-            Multimodal Manipulation (SAMM) dataset, synthesized via a two-stage pipeline: (1) applying state-of-the-art image
-            editing techniques, and (2) generating plausible textual descriptions that reinforce the visual deception. To tackle
-            this more sophisticated forgery, we propose RamDG++, a Retrieval-Augmented Manipulation Detection and Grounding
-            framework built upon a Multimodal Large Language Model (MLLM) backbone. RamDG++ leverages retrieved identity-specific
-            background information through two key mechanisms: in the training stage, we introduce Celebrity-News Cross-Source
-            Contrastive Learning (CNCL), which utilizes retrieved multimodal celebrity data as a bridge to align and remedy the
-            semantic gap; in the inference stage, we propose Test-time Adaptive Gating to dynamically filter background noise,
-            further sharpening detection and grounding precision. Extensive experiments demonstrate that RamDG++ significantly
+            The detection and grounding of manipulated content in multimodal data is a pivotal challenge in media
+            forensics. While existing benchmarks have advanced the field, they often rely on misalignment artifacts
+            that fail to capture real-world forgery patterns. Practical attacks typically maintain semantic consistency
+            across modalities, whereas current datasets introduce artificial cross-modal disruptions that act as easily
+            detectable shortcuts. To bridge this gap, we introduce the study of Semantically-Coordinated Multimodal
+            Manipulation, where visual edits are systematically paired with contextually consistent textual narratives.
+            We first present the Semantic-Aligned Multimodal Manipulation (SAMM) dataset, synthesized via a two-stage
+            pipeline: (1) applying state-of-the-art image editing techniques, and (2) generating plausible textual
+            descriptions that reinforce the visual deception. To tackle this more sophisticated forgery, we propose
+            RamDG++, a Retrieval-Augmented Manipulation Detection and Grounding framework built upon a Multimodal Large
+            Language Model (MLLM) backbone. RamDG++ leverages retrieved identity-specific background information through
+            two key mechanisms: in the training stage, we introduce Celebrity-News Cross-Source Contrastive Learning
+            (CNCL), which utilizes retrieved multimodal celebrity data as a bridge to align and remedy the semantic gap;
+            in the inference stage, we propose Test-time Adaptive Gating to dynamically filter background noise, further
+            sharpening detection and grounding precision. Extensive experiments demonstrate that RamDG++ significantly
             outperforms existing methods, achieving a 2.06% improvement in detection accuracy on the SAMM dataset over
             state-of-the-art approaches.
           </p>
@@ -156,10 +139,9 @@
       <p>
         Existing multimodal manipulation benchmarks often rely on cross-modal mismatches that create shortcut
         artifacts for detection. SAMM introduces semantically coordinated multimodal manipulations, where visual
-        edits are paired with contextually consistent textual narratives. SAMM provides fine-grained
-        annotations for real news, face-swap manipulation, and facial-attribute manipulation. RamDG++ addresses this
-        task with retrieval-augmented celebrity knowledge, cross-source contrastive learning, and test-time adaptive
-        CAP gating.
+        edits are paired with contextually consistent textual narratives. SAMM provides fine-grained annotations
+        for real news, face-swap manipulation, and facial-attribute manipulation. RamDG++ addresses this task with
+        retrieval-augmented celebrity knowledge, cross-source contrastive learning, and test-time adaptive CAP gating.
       </p>
     </section>
 
@@ -309,27 +291,51 @@
           </div>
 
           <div class="leader-row">
-            <span>ViLT</span><span>88.83</span><span>89.84</span><span>65.38</span><span>73.40</span>
+            <span>ViLT</span>
+            <span>88.83</span>
+            <span>89.84</span>
+            <span>65.38</span>
+            <span>73.40</span>
           </div>
 
           <div class="leader-row">
-            <span>HAMMER</span><span>92.43</span><span>93.44</span><span>77.68</span><span>84.31</span>
+            <span>HAMMER</span>
+            <span>92.43</span>
+            <span>93.44</span>
+            <span>77.68</span>
+            <span>84.31</span>
           </div>
 
           <div class="leader-row">
-            <span>HAMMER++</span><span>92.26</span><span>93.34</span><span>77.66</span><span>84.35</span>
+            <span>HAMMER++</span>
+            <span>92.26</span>
+            <span>93.34</span>
+            <span>77.66</span>
+            <span>84.35</span>
           </div>
 
           <div class="leader-row muted-row">
-            <span>FKA-Owl</span><span>92.60</span><span>13.84</span><span>66.40</span><span>27.66</span>
+            <span>FKA-Owl</span>
+            <span>92.60</span>
+            <span>13.84</span>
+            <span>66.40</span>
+            <span>27.66</span>
           </div>
 
           <div class="leader-row ours-row">
-            <span>RamDG</span><span>94.66</span><span>95.33</span><span>80.90</span><span>84.83</span>
+            <span>RamDG</span>
+            <span>94.66</span>
+            <span>95.33</span>
+            <span>80.90</span>
+            <span>84.83</span>
           </div>
 
           <div class="leader-row ours-row strong">
-            <span>RamDG++</span><span>97.15</span><span>97.08</span><span>75.83</span><span>91.78</span>
+            <span>RamDG++</span>
+            <span>97.15</span>
+            <span>97.08</span>
+            <span>75.83</span>
+            <span>91.78</span>
           </div>
         </div>
       </div>
@@ -594,21 +600,19 @@
       </div>
     </section>
 
-    <section class="section qualitative-section">
-      <div class="qualitative-container">
-        <p class="section-kicker">Visualization</p>
-        <h2>Qualitative Results</h2>
+    <section class="container section qualitative-section">
+      <p class="section-kicker">Visualization</p>
+      <h2>Qualitative Results</h2>
 
-        <figure class="project-figure qualitative-figure">
-          <img src="assets/figure-6-qualitative-result.png" alt="Qualitative results for manipulation detection and grounding." />
-          <figcaption>
-            <strong>Qualitative results.</strong> Red annotations mark the ground truth and blue annotations mark
-            model predictions. The examples show that the model can identify manipulated face regions and tampered
-            text spans for both attribute manipulation and face-swap manipulation, while preserving real news as
-            authentic.
-          </figcaption>
-        </figure>
-      </div>
+      <figure class="project-figure qualitative-figure">
+        <img src="assets/figure-6-qualitative-result.png" alt="Qualitative results for manipulation detection and grounding." />
+        <figcaption>
+          <strong>Qualitative results.</strong> Red annotations mark the ground truth and blue annotations mark
+          model predictions. The examples show that the model can identify manipulated face regions and tampered
+          text spans for both attribute manipulation and face-swap manipulation, while preserving real news as
+          authentic.
+        </figcaption>
+      </figure>
     </section>
 
     <section id="bibtex" class="container narrow section">
